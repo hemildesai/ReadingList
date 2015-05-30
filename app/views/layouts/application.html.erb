@@ -7,7 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container main">
+  <h1 class="mainheading text-center">THE READING LIST</h1>
+  <ul class="nav nav-tabs nav-justified mainbar">
+    <li role="presentation"><%= link_to "HOME", root_path %></li>
+    <li role="presentation"><a href="#">BOOKS</a></li>
+    <li role="presentation"><a href="#">GENRES</a></li>
+  </ul>
+</div>
 <%= yield %>
 
 </body>
