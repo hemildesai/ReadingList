@@ -91,7 +91,11 @@
     <div class="col-sm-4">
       <h2>Genres</h2>
       <ul class="list-unstyled">
-        
+        <li>
+        <% @genres.each do |g|%>
+          <%= link_to g.name, books_path(filter: g.name), class: "label label-primary" %>
+        <% end %>
+        </li>
       </ul>
     </div>
   </div>
