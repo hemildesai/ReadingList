@@ -14,7 +14,7 @@ class Book < ActiveRecord::Base
   }
 
   scope :filter, ->(title) {
-    joins(:genres).where(genres: {name: title})
+    joins(:genres).where(genres: {name: title}) if title.present?
   }
   before_save :set_keywords
 
